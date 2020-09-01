@@ -34,7 +34,7 @@ class DetailFragment : Fragment() {
             director_textView.text = it.director
             yourNotes.setText(it.notes)
             genre_imageView.setImageResource(it.typeImage)
-            your_rating.text = "Your rating: " + it.ratingText
+            your_rating.text = "Your rating: ${it.ratingText}"
             title_textView.text = "${it.title} (${it.yearReleased})"
         })
     }
