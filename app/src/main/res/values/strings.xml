@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">MovieRanker</string>
+    <string name="settings">Settings</string>
+    <string name="info">Info</string>
+    <string name="home">Home</string>
+    <string name="delete_all">Delete All</string>
+    <string name="genre">Genre</string>
+    <string name="year_released">Year Released</string>
+    <string name="rating">Rating (Out of 5)</string>
+    <string name="title">Title:</string>
+    <string name="director">Director:</string>
+    <string name="notes">Notes:</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="watched">Watched</string>
+    <string name="version">Version 1.0</string>
+    <string name="copyright">Copyright &#169; Mwoud Apps™, 2020. Portions of this code were
+    used with the consent of Instructor A. Roolfs at the University of Rochester. If you\'re reading this,
+    I really enjoyed the class and it\'s inspired me to go further in Android. Thank you!</string>
+    <string name="legal">Royalty free icon assets used with permission from https://icons8.com/ on
+    the basis of crediting their site.</string>
+
+    <!--    Alert-->
+    <string name="ok">OK</string>
+    <string name="alert">Alert</string>
+    <string name="movie_deleted_alert">%s Successfully Removed</string>
+    <string name="tapToEdit">Your Notes (Tap to Edit):</string>
+    <string name="tapMe">Tap Me to Check Out Reviews!</string>
+    <string name="showhidewatched">Show/Hide Watched Movies</string>
+    <string name="pickcolor">Select a Primary Color for the App</string>
+    <string name="sliderText">Change the Speed of the Transition Animations</string>
+    <string name="movieDetails">Movie Details</string>
+    <string name="reviewTitle">Reviews</string>
+
+    <!-- Genre Array-->
+    <string-array name="genreArray">
+        <item>Drama</item>
+        <item>Action</item>
+        <item>Comedy</item>
+        <item>Musical</item>
+        <item>Thriller</item>
+        <item>Horror</item>
+        <item>Mystery</item>
+        <item>Documentary</item>
+        <item>Sci-Fi</item>
+    </string-array>
+
+    <!-- Rating Array-->
+    <string-array name="ratingArray">
+        <item>0</item>
+        <item>.5</item>
+        <item>1</item>
+        <item>1.5</item>
+        <item>2</item>
+        <item>2.5</item>
+        <item>3</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="colorArray">
+        <item>Green</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+    </string-array>
+
+</resources>
