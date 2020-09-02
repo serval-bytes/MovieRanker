@@ -12,7 +12,6 @@ import com.nmccloud.project3.R
 import com.nmccloud.project3.database.Movie
 import com.nmccloud.project3.ui.SharedViewModel
 import kotlinx.android.synthetic.main.review_view.*
-import java.util.*
 
 /* Originally implemented using SafeArgs,
    refactored to use shared ViewModel to
@@ -38,9 +37,10 @@ class ReviewFragment : Fragment() {
             (activity as AppCompatActivity).supportActionBar?.title = "Reviews for ${it.title} ${it.yearReleasedText}"
             review_View.webViewClient = WebViewClient()
             review_View.settings.javaScriptEnabled = true
-            val title = "/m/" + it.title.toLowerCase().replace("[-\\s]".toRegex(), "_")
-            Log.d("title: ", title)
-            review_View.loadUrl("https://rottentomatoes.com$title")
+            val titleTween = "/m/" + it.title.toLowerCase().replace("[-:\\s]".toRegex(), "_")
+            val titleFinal = titleTween.replace("_+".toRegex(), "_") //kind of messy but it'll do for now...
+            Log.d("title: ", titleFinal)
+            review_View.loadUrl("https://rottentomatoes.com$titleFinal")
             })
     }
 }

@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="4dp"
                     android:text="@{movie.title}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="24sp"
@@ -61,19 +61,20 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="Title Title" />
 
-                <TextView
-                    android:id="@+id/date_textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="@{movie.yearReleasedText}"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@+id/title_textView3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="(2020)" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/date_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@{movie.yearReleasedText}"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="(2020)" />
 
             <TextView
                 android:id="@+id/director_textView3"
@@ -82,7 +83,7 @@
                 android:layout_marginStart="40dp"
                 android:text="@{movie.director}"
                 android:textAlignment="center"
-                android:textStyle="italic"
+                android:textStyle="bold|italic"
                 app:layout_constraintStart_toEndOf="@+id/genre_imageView"
                 app:layout_constraintTop_toBottomOf="@+id/title_textView"
                 tools:text="Directed By XXX" />
