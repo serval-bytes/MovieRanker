@@ -81,14 +81,6 @@ class AddMovieDialog : BottomSheetDialogFragment(), AdapterView.OnItemSelectedLi
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-    }
-
-    override fun onDetach(){
-        super.onDetach()
-    }
-
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when(parent){
             genre_spinner -> newMovie.genre = position
@@ -98,14 +90,6 @@ class AddMovieDialog : BottomSheetDialogFragment(), AdapterView.OnItemSelectedLi
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {}
-
-    private fun cameraPermission(): Boolean {
-        val permission = ContextCompat.checkSelfPermission(
-            requireContext(),
-            Manifest.permission.CAMERA
-        )
-        return permission == PackageManager.PERMISSION_GRANTED
-    }
 
     private fun onDone(){
         newMovie.uuid = uuid
@@ -118,7 +102,6 @@ class AddMovieDialog : BottomSheetDialogFragment(), AdapterView.OnItemSelectedLi
 
     companion object {
         private const val TAG = "AddMovieDialog"
-        private const val REQUEST_PHOTO = 0
 
         fun showDialog(fragmentManager: FragmentManager) {
             val dialog = AddMovieDialog()
