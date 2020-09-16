@@ -1,6 +1,7 @@
 package com.nmccloud.project3.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,9 +31,12 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         vm.selectedMovie.observe(viewLifecycleOwner, Observer<Movie>{
-            tapToEdit.text = "Your Notes for ${it.title} (Tap to Edit):"
+            tapToEdit.text = "Notes for ${it.title} (Tap to Edit):"
+            tapToEdit.setOnClickListener {
+                Log.d("Onclick:", "Click");
+            }
             director_textView.text = it.director
-            yourNotes.setText(it.notes)
+            yourNotes.text = it.notes
             genre_imageView.setImageResource(it.typeImage)
             your_rating.text = "Your rating: ${it.ratingText}"
             title_textView.text = "${it.title} (${it.yearReleased})"
