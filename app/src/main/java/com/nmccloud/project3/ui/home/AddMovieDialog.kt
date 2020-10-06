@@ -1,8 +1,5 @@
 package com.nmccloud.project3.ui.home
-/* Large portions of picasso/camera
- * usage code taken from Instructor Roolfs'
- * MediaTrackerDemo02 project
- */
+
 
 import android.Manifest
 import android.app.Activity
